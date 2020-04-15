@@ -234,6 +234,26 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>2.1.0</version>
+                <configuration>
+                    <container>
+                        <args>
+                            <arg>server</arg>
+                            <arg>/app/resources/devservice.yml</arg>
+                        </args>
+                    </container>
+                    <to>
+                        <image>acme/${artifactId}</image>
+                        <tags>
+                            <tag>${version}</tag>
+                            <tag>latest</tag>
+                        </tags>
+                    </to>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>

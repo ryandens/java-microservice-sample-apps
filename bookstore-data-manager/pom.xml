@@ -58,7 +58,7 @@
 				<version>2.1.0</version>
 				<configuration>
 					<to>
-						<image>acme/bookstore-data-manager</image>
+						<image>acme/${artifactId}</image>
 						<tags>
 							<tag>${version}</tag>
 							<tag>latest</tag>
